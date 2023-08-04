@@ -21,12 +21,17 @@
     </style>
    <body style="width: 100%;">
     <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <img src="https://portal.unifametro.edu.br/image/logo-responsivo.png" height="100em" width="350em" />
-            <span class="fs-4">Consulte suas disciplinas e locais de aula</span>
-          </a>
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom ">
+          <div class="text-center">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <img src="https://www.opovo.com.br/_midias/png/2021/12/10/logo_unifametro-17668450.png" height="200em" width="350em" />
+              </a>
+             
+          </div>
         </header>
+        <div class="text-center">
+            <h3>Consulte suas Disciplinas e locais de aulas</h3>
+          </div>
       </div>
       <div class="container">
         <div class="row">
@@ -99,6 +104,7 @@
                 processing: true,
                 serverSide: false,
                 searching: false,
+                paging:   false,
                 ajax: {
                     url: "{{route('quadro.ajax')}}",
                     method: 'POST',
@@ -164,5 +170,13 @@
         });
         
       </script>
+    <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="https://portal.unifametro.edu.br/FrameHTML/Web/App/Edu/PortalEducacional/login/" class="nav-link px-2 text-muted" >Portal do Aluno</a></li>
+            <li class="nav-item"><a href="https://educacaoonline.unifametro.edu.br/login/index.php" class="nav-link px-2 text-muted">Disciplinas Online</a></li>
+          </ul>
+        </footer>
+      </div>
    </body>
 </html>

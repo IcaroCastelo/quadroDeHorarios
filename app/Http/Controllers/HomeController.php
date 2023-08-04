@@ -20,8 +20,12 @@ class HomeController extends Controller
         $quadroDeHorario = DB::select("SELECT 
         UNIDADE, 
         SALA, 
-        DIASEMANA, 
-        CONCAT(HORAINICIAL, ' - ', HORAFINAL) AS HORARIO,
+        DIASEMANA,
+        NUMEROSEMANA,
+        REPLACE(UNIDADE, '-', CASE WHEN DISCIPLINA LIKE '%- Distância' THEN 'EAD' ELSE 'PRESENCIAL' END) AS UNIDADE,
+	REPLACE(SALA, '-', CASE WHEN DISCIPLINA LIKE '%- Distância' THEN 'EAD' ELSE 'PRESENCIAL' END) AS SALA, 
+	REPLACE(DIASEMANA, '-', CASE WHEN DISCIPLINA LIKE '%- Distância' THEN 'EAD' ELSE 'PRESENCIAL' END) AS DIASEMANA,	
+	REPLACE(CONCAT(HORAINICIAL, ' - ', HORAFINAL), '- - -', CASE WHEN DISCIPLINA LIKE '%- Distância' THEN 'EAD' ELSE 'PRESENCIAL' END) AS HORARIO,
         DISCIPLINA,
         CURSO,
         MATRICULA,
@@ -33,8 +37,8 @@ class HomeController extends Controller
         CPF = '$cpf'--:RA1
     AND CODCOLIGADA = 1--:CODCOLIGADA1
     ORDER BY
-        NUMEROSEMANA,
-        [PERIODO LETIVO] DESC");
+        NUMEROSEMANA
+        ");
 
        $retorno['data'] = $quadroDeHorario;
 

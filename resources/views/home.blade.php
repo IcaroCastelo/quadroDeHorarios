@@ -9,15 +9,18 @@
       <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" >
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" >
       <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap.css">
       <title>Quandro de Horário</title>
    </head>
     <style>
         	
-    table.dataTable td {
+    /* table.dataTable td {
     font-size: 15px;
-    }
+    } */
+    /* div.container { max-width: 1200px } */
     </style>
    <body style="width: 100%;">
     <div class="container">
@@ -30,7 +33,7 @@
           </div>
         </header>
         <div class="text-center mb-5">
-            <h3>CONSULTE SUAS DISCIPLINAS E LOCAIS DE AULAS</h3>
+            <h3>QUADRO DE HORÁRIO</h3>
         </div>
     </div>
 
@@ -67,32 +70,37 @@
             </div>
         </div>
     <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <table id="quadro_horario" class="display nowrap" style="width:100%" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>DIA DA SEMANA</th>
+                            <th>HORÁRIO</th>
+                            <th>SALA</th>
+                            <th>DISCIPLINA</th>
+                            <th>UNIDADE</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
         
-        <table id="quadro_horario" class="display compact" style="width:100%">
-            <thead>
-                <tr>
-                    <th>UNIDADE</th>
-                    <th>SALA</th>
-                    <th>DIA SEMANA</th>
-                    <th>HORA INICIAL</th>
-                    <th>HORA FINAL</th>
-                    <th>DISCIPLINA</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
     </div>
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
       <script src="https://kit.fontawesome.com/12d00c3c33.js" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
-      <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
       <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js"></script>
       <script src="https://cdn.datatables.net/plug-ins/1.13.4/sorting/percent.js"></script>
       <script type="text/javascript" src="https://cdn.datatables.net/datetime/1.0.3/js/dataTables.dateTime.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js" integrity="sha512-OVIfkIJf755ncwio9Qw2Hu2ZplJvD/iYyy1t4SIzZqXkcdJyJSfmTEtaAevFS8Jf/seM3CSPzRjqQGkbhvasJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.js" integrity="sha512-kNpUJvzoDikOSOvP7VCpuTYzq/DQ409v6Du+bN96RA70hvDlfMcfbKBM7fid6mpYHFqA08UDoSxTQgLRYxFllw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js" integrity="sha512-OVIfkIJf755ncwio9Qw2Hu2ZplJvD/iYyy1t4SIzZqXkcdJyJSfmTEtaAevFS8Jf/seM3CSPzRjqQGkbhvasJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.js" integrity="sha512-kNpUJvzoDikOSOvP7VCpuTYzq/DQ409v6Du+bN96RA70hvDlfMcfbKBM7fid6mpYHFqA08UDoSxTQgLRYxFllw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.23/datatables.min.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
       <script>
         
         $(document).ready(function () {
@@ -103,6 +111,7 @@
                 serverSide: false,
                 searching: false,
                 paging:   false,
+                responsive: true,
                 ajax: {
                     url: "{{route('quadro.ajax')}}",
                     method: 'POST',
@@ -120,16 +129,15 @@
                     { "width": "15%", "targets": 2 },
                     { "width": "15%", "targets": 3 },
                     { "width": "10%", "targets": 4 },
-                    { "width": "25%", "targets": 5 },
+                    // { "width": "25%", "targets": 5 },
                 ],
-                scrollX: true,
+                // scrollX: true,
                 columns: [
-                    { data: 'UNIDADE' },
-                    { data: 'SALA' },
                     { data: 'DIASEMANA' },
-                    { data: 'HORAINICIAL' },
-                    { data: 'HORAFINAL' },
+                    { data: 'HORARIO'},
+                    { data: 'SALA' },
                     { data: 'DISCIPLINA' },
+                    { data: 'UNIDADE' },
                     
                 ],
                 language: {

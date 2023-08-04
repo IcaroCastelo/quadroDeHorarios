@@ -24,16 +24,17 @@
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom ">
           <div class="text-center">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <img src="https://www.opovo.com.br/_midias/png/2021/12/10/logo_unifametro-17668450.png" height="200em" width="350em" />
+                <img src="https://www.opovo.com.br/_midias/png/2021/12/10/logo_unifametro-17668450.png" height="150em" width="262em" />
               </a>
              
           </div>
         </header>
-        <div class="text-center">
-            <h3>Consulte suas Disciplinas e locais de aulas</h3>
-          </div>
-      </div>
-      <div class="container">
+        <div class="text-center mb-5">
+            <h3>CONSULTE SUAS DISCIPLINAS E LOCAIS DE AULAS</h3>
+        </div>
+    </div>
+
+    <div class="container border border-success rounded shadow p-3 mb-3">
         <div class="row">
             <div class="col-md-4 col-8">
                 <div class="input-group input-group-sm mb-3">
@@ -44,10 +45,7 @@
                     </div>
                 </div>
             </div>
-        </div>      
-    </div>
-
-    <div class="container border border-success rounded shadow p-3 mb-3">
+        </div>   
         <div class="row">
             <div class="col-12 col-md-5">
                 <label for="basic-url" class="form-label">Aluno</label>
@@ -119,8 +117,8 @@
                     {className: "text-center", "targets": ['_all']},
                     { "width": "20%", "targets": 0 },
                     { "width": "25%", "targets": 1 },
-                    { "width": "10%", "targets": 2 },
-                    { "width": "10%", "targets": 3 },
+                    { "width": "15%", "targets": 2 },
+                    { "width": "15%", "targets": 3 },
                     { "width": "10%", "targets": 4 },
                     { "width": "25%", "targets": 5 },
                 ],

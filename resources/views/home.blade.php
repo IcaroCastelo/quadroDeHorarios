@@ -16,15 +16,19 @@
       <link rel="stylesheet" href="https://cdn.datatables.net/colreorder/1.7.0/css/colReorder.dataTables.min.css">
       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css">
       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap.css">
-      <title>Quandro de Horário</title>
+      <title>Quadro de horário</title>
    </head>
     <style>
     .auto {
         width: auto;
     }
-    /* table.dataTable td {
-    font-size: 15px;
-    } */
+    table.dataTable td {
+        word-break: break-all;
+    }
+    td {
+        white-space: initial;
+    }
+   
     /* div.container { max-width: 1200px } */
     </style>
    <body style="width: 100%;">
@@ -140,11 +144,11 @@
                 },
                 columnDefs: [
                     {className: "text-center", "targets": ['_all']},
-                    { "width": "20%", "targets": 0 },
-                    { "width": "25%", "targets": 1 },
-                    { "width": "15%", "targets": 2 },
-                    { "width": "15%", "targets": 3 },
-                    { "width": "10%", "targets": 4 },
+                    { "width": "20%", "word-break": "break-all", "targets": 0 },
+                    { "width": "25%", "word-break": "break-all", "targets": 1 },
+                    { "width": "15%", "word-break": "break-all", "targets": 2 },
+                    { "width": "15%", "word-break": "break-all", "targets": 3 },
+                    { "width": "10%", "word-break": "break-all", "targets": 4 },
                     { 'visible': false, 'targets': [0] }
                 ],
                
@@ -181,7 +185,7 @@
                         if( response.success) {
                             table.ajax.reload();
 
-                           $('#Aluno').val(response.data[0].NOMEFANTASIA) 
+                           $('#Aluno').val(response.data[0].ALUNO) 
                            $('#Curso').val(response.data[0].CURSO) 
                            $('#Matricula').val(response.data[0].MATRICULA) 
                         }

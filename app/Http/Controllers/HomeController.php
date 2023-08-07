@@ -29,7 +29,7 @@ class HomeController extends Controller
         DISCIPLINA,
         CURSO,
         MATRICULA,
-        NOMEFANTASIA,
+        ALUNO,
         CPF
     FROM
         Corpore.dbo.VW_COMPROVANTE_MATRICULA_PORTAL(NOLOCK)

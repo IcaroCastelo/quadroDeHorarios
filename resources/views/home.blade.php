@@ -28,6 +28,9 @@
     td {
         white-space: initial;
     }
+    li.text-center {
+        white-space: normal;
+    }
    
     /* div.container { max-width: 1200px } */
     </style>
@@ -121,6 +124,7 @@
         
         $(document).ready(function () {
             $('#cpf').mask('99999999999');
+            $("#quadro_horario tr td").css("white-space","pre-wrap");
             var table = $('#quadro_horario').DataTable({
                 dom: 'Bfrtip',
                 buttons: [

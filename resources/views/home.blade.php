@@ -207,7 +207,7 @@
             <h5><strong>Acesse aqui:</strong></h5>
             <p style="text-decoration: underline; font-size: 1.3em"><a href="https://portal.unifametro.edu.br/FrameHTML/Web/App/Edu/PortalEducacional/login/" target="_blank" class="nav-link px-2 text-muted" >Portal Acadêmico</a><p>
             <h5><strong>Acesse aqui:</strong></h5>
-            <p style="text-decoration: underline; font-size: 1.3em"><a href="https://educacaoonline.unifametro.edu.br/login/index.php" target="_blank" class="nav-link px-2 text-muted" >Disciplina Online</a><p>
+            <p style="text-decoration: underline; font-size: 1.3em"><a href="https://educacaoonline.unifametro.edu.br/login/index.php" target="_blank" class="nav-link px-2 text-muted" >Eduacação Online</a><p>
          </div>
         </footer>
       </div>

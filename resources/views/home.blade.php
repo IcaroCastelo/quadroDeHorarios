@@ -104,6 +104,7 @@
     </div>
       <script src="https://code.jquery.com/jquery-3.7.0.js"> </script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
       <script src="https://kit.fontawesome.com/12d00c3c33.js" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
       <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
@@ -192,6 +193,14 @@
                            $('#Aluno').val(response.data[0].ALUNO) 
                            $('#Curso').val(response.data[0].CURSO) 
                            $('#Matricula').val(response.data[0].MATRICULA) 
+                        }
+
+                        if(response.data.length === 0) {
+                            Swal.fire({
+                            icon: 'warning',
+                            title: 'Aluno sem disciplina',
+                            html: '</br></br> <strong>Novato:</strong> Procurar o Quero ser Aluno. </br> <strong>Veterano:</strong> Procurar o Atendimento ao aluno',
+                        });
                         }
                     }
                 });

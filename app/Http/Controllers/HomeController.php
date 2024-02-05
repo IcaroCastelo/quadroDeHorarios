@@ -12,8 +12,8 @@ class HomeController extends Controller
     }
 
     public function quadroDeHorarioAjax(Request $request) {
-        $retorno['success'] = true;
-        $retorno['mensage'] = "Operação realizada com sucesso!";
+        // $retorno['success'] = true;
+        // $retorno['mensage'] = "Operação realizada com sucesso!";
         
         $cpf =  $request->cpf;
   

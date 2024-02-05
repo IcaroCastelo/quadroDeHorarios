@@ -187,7 +187,7 @@
                         cpf: function(){return $("#cpf").val()},
                     },
                     success: function(response) {
-                        if( response.success) {
+                        if( response.data.length !== 0) {
                             table.ajax.reload();
 
                            $('#Aluno').val(response.data[0].ALUNO) 

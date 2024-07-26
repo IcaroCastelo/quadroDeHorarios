@@ -94,6 +94,7 @@
                             <th>SALA</th>
                             <th>DISCIPLINA</th>
                             <th>UNIDADE</th>
+                            <th>BLOCO</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -164,6 +165,7 @@
                     { data: 'SALA' },
                     { data: 'DISCIPLINA' },
                     { data: 'UNIDADE' },
+                    { data: 'DESCBLOCO' },
                     
                 ],
                 language: {

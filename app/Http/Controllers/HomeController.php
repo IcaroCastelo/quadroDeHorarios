@@ -30,9 +30,10 @@ class HomeController extends Controller
         CURSO,
         MATRICULA,
         ALUNO,
-        CPF
+        CPF,
+        DESCBLOCO
     FROM
-        Corpore.dbo.VW_COMPROVANTE_MATRICULA_PORTAL(NOLOCK)
+        Corpore.dbo.VW_COMPROVANTE_MATRICULA_PORTAL_QUADRO_HORARIO(NOLOCK)
     WHERE
         CPF = '$cpf'--:RA1
     AND CODCOLIGADA = 1--:CODCOLIGADA1

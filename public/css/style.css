@@ -1,0 +1,477 @@
+.auto {
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.custom-container {
+    border: 1px solid rgb(25 135 84);
+    border-radius: 8px; 
+    padding: 16px; 
+    margin-bottom: 16px; 
+   
+}
+
+
+
+.quadro-horario {
+    color: var(--Colors-Semantic-Neutral-900, #141414);
+
+    /* Heading/h3 */
+    font-family: "Montserrat";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 125% */
+}
+
+.whatsapp {
+    color: var(--Color-Neutral-900, #131414);
+
+    /* Body/Large */
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+}
+
+.cpf {
+    color: #000;
+
+    /* Body/Large */
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 155.556% */
+}
+
+.pesquisar {
+    background: var(--Color-Gradient-Primary-Enabled, linear-gradient(268deg, #D35614 0%, #F9A053 100%));
+    font-family: "Montserrat";
+    color: var(--Color-Semantical-Neutral-100, #FFF);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.64px;
+    text-transform: uppercase;
+}
+
+.inserir {
+    color: var(--Colors-Semantic-Neutral-700, #3B3D3C);
+
+    /* Body/Large */
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+    align-items: center; 
+   
+}
+
+.nome,
+.matricula,
+.curso {
+    background: transparent;
+    border: none;
+    /* border-bottom: 1px solid #ccc; Adiciona um traço */
+    color: #141414;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    pointer-events: none; /* Impede interação */
+    outline: none; /* Remove borda ao focar */
+    width: 100%; /* Ajusta o tamanho do input */
+}
+
+.nome,
+.matricula,
+.curso,
+p.card-text {
+    color: var(--Neutral-800, #141414);
+
+    /* Body/Small */
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+
+.input-nome,
+.input-matricula,
+.input-curso {
+    color: var(--Color-Neutral-800, #272928);
+
+    /* Body/Medium */
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    display: block; /* Faz cada span ocupar toda a largura disponível */
+    width: 100%;
+}
+
+.card-title {
+    background: var(--Color-Primary-50, #ECFDEC); color: var(--Neutral-900, #005C4C);  
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+    height: 40px; 
+    font-weight: 700; 
+    font-size: 14px;
+    padding: 7px;
+}
+
+.custom-btn {
+    border: 2px solid #F6741C;
+    color: var(--Color-Secondary-600, #D35614);
+    font-weight: 700;
+    font-style: normal;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    font-family: "Montserrat"; 
+    font-size: 16px;
+    letter-spacing: 0.64px;
+    line-height: 28px;
+}
+
+.custom-btn:hover {
+    background: #F6741C;
+    color: white;
+}
+
+.swal-html-content .message {
+    display: flex;
+    flex-direction: column; /* Exibe os itens um abaixo do outro */
+}
+
+.swal-html-content .text-with-icon {
+    display: flex;
+    align-items: center; /* Alinha o SVG ao lado do texto */
+    margin-bottom: 8px; /* Espaçamento entre os itens */
+}
+
+.swal-html-content .message-text {
+    margin-right: 8px; /* Espaçamento entre o texto e o SVG */
+}
+
+.col-12.col-sm-6.col-md-4.col-lg-6 .card {
+    width: 100%; 
+}
+.card-body {
+    padding: 2px 2px;
+}
+
+.message-text {
+    font-family: "Montserrat";
+    font-size: 14px;
+    color: #5e5e5e;
+    line-height: 28px;
+}
+
+.dia {
+    color: var(--Color-Neutral-900, #131414);
+
+    /* Body/Large */
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+    margin-right: 10px; 
+    width: 77px;
+}
+
+.calendario {
+    width: 26px;
+    height: 28px;
+}
+
+.div-calendario {
+    width: 50px;
+    height: 50px; 
+    background-color: rgb(249 230 173);
+}
+
+.copyright {
+    color: var(--Color-Semantical-Neutral-100, #FFF);
+  
+    /* Typography/Desktop/Body/Small */
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; 
+}
+
+@media (max-width: 767px) {
+    .col-12.col-sm-6.col-md-4.col-lg-6 {
+        flex: 1 1 100%; 
+    }
+    .card-title {
+        height: 50px !important;
+    }
+
+    .quadro {
+        display: flex;
+        padding: 12px 0px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        background: rgba(240, 245, 242, 0.50);
+    }
+
+    .quadro-horario {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .calendario {
+        width: 16px;
+        height: 18px;
+    }
+
+    .div-calendario {
+        width: 31px;;
+        height: 31px; 
+        background-color: rgb(249 230 173);
+    }
+
+    .col-4, .col-8 {
+        width: 100% !important; /* Faz as colunas ficarem empilhadas */
+    }
+
+    .inserir {
+        color: var(--Colors-Semantic-Neutral-700, #3B3D3C);
+        text-align: center;
+
+        /* Body/Small */
+        font-family: "Montserrat";
+        font-size: 14px !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; 
+    }
+
+    .inseir-svg {
+        display: flex;
+        justify-content: center;
+    }
+
+    .custom-btn {
+        color: var(--Color-Secondary-600, #D35614);
+
+        /* Typography/Desktop/Button/Primary */
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.64px;
+        text-transform: uppercase;
+    }
+
+    .custom-container {
+        border: 0px;       
+    }
+
+    .cpf {
+        text-align: center;
+    }
+
+    .input-nome,
+    .input-matricula,
+    .input-curso {
+        color: var(--Color-Neutral-800, #272928);
+
+        /* Body/Small */
+        font-family: "Montserrat";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; 
+    }
+
+    .dia {
+        color: var(--Color-Neutral-900, #131414);
+
+        /* Body/Medium */
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; 
+    }
+
+    .copyright {
+        color: var(--Color-Semantical-Neutral-100, #FFF);
+        text-align: center;
+        
+        /* Auxiliary/Caption */
+        font-family: "Montserrat";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; 
+    }
+   
+}
+
+@media (min-width: 768px) {
+    .col-12.col-sm-6.col-md-4.col-lg-6 {
+        flex: 1;
+    }
+
+    .card-title {
+        height: 50px !important;
+    }
+
+    /* .quadro-horario {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .calendario {
+        width: 16px;
+        height: 18px;
+    } */
+
+}
+
+@media (max-width: 480px) {
+    #loading {
+        padding: 15px;
+        font-size: 16px;
+    }
+    #loading-text {
+        font-size: 14px;
+    }
+    #loading-gif {
+        width: 60px;
+        height: 30px;
+    }
+    .card-title {
+        height: 50px !important;
+    }
+
+    .quadro {
+        display: flex;
+        padding: 12px 0px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        background: rgba(240, 245, 242, 0.50);
+    }
+
+    .quadro-horario {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .calendario {
+        width: 16px;
+        height: 18px;
+    }
+
+    .div-calendario {
+        width: 31px;;
+        height: 31px; 
+        background-color: rgb(249 230 173);
+    }
+
+    .col-4, .col-8 {
+        width: 100% !important; /* Faz as colunas ficarem empilhadas */
+    }
+
+    .inserir {
+        color: var(--Colors-Semantic-Neutral-700, #3B3D3C);
+        text-align: center;
+
+        /* Body/Small */
+        font-family: "Montserrat";
+        font-size: 14px !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; 
+    }
+
+    .inseir-svg {
+        display: flex;
+        justify-content: center;
+    }
+
+    .custom-btn {
+        color: var(--Color-Secondary-600, #D35614);
+
+        /* Typography/Desktop/Button/Primary */
+        font-family: "Montserrat";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.64px;
+        text-transform: uppercase;
+    }
+
+    .custom-container {
+        border: 0px;       
+    }
+
+    .cpf {
+        text-align: center;
+    }
+
+    .input-nome,
+    .input-matricula,
+    .input-curso {
+        color: var(--Color-Neutral-800, #272928);
+
+        /* Body/Small */
+        font-family: "Montserrat";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; 
+    }
+
+    .dia {
+        color: var(--Color-Neutral-900, #131414);
+
+        /* Body/Medium */
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; 
+    }
+
+    .copyright {
+        color: var(--Color-Semantical-Neutral-100, #FFF);
+        text-align: center;
+        
+        /* Auxiliary/Caption */
+        font-family: "Montserrat";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; 
+    }
+
+    .footer {
+        margin-top: 20px;
+    }
+
+}

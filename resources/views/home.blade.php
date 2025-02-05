@@ -267,7 +267,7 @@
                                     $('#Matricula').text(item.MATRICULA);
 
 
-                                    tabelaHtml += `<div class="col-sm-4 col-md-2 col-lg-3 mb-3 d-flex">
+                                    tabelaHtml += `<div class="col-sm-4 col-md-2 col-lg-3 mb-3 d-flex card-responsivo">
                                         <div class="card flex-grow-1" style="border-radius: 16px; border: 1px solid var(--Neutral-400, #B8B8B8); margin-left: 10px;">
                                             <div class="card-body">
                                                 <h6 class="card-title" style="">${item.DISCIPLINA}</h6>

@@ -171,9 +171,9 @@
                     <div class="text-center text-md-end">
                         <a href="https://www.instagram.com/unifametro/" target="_blank" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
                         <a href="https://www.facebook.com/unifametro" target="_blank" class="text-white mx-2"><i class="fab fa-facebook fa-lg"></i></a>
-                        <a href="#" class="text-white mx-2"><i class="fab fa-youtube fa-lg"></i></a>
+                        <a href="https://www.youtube.com/unifametro" class="text-white mx-2"><i class="fab fa-youtube fa-lg"></i></a>
                         <a href="https://www.linkedin.com/company/unifametro" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
-                        <a href="https://www.youtube.com/unifametro" target="_blank" class="text-white mx-2"><i class="fab fa-tiktok fa-lg"></i></a>
+                        {{-- <a href="https://www.youtube.com/unifametro" target="_blank" class="text-white mx-2"><i class="fab fa-tiktok fa-lg"></i></a> --}}
                     </div>
                 </div>
                 <div class="d-flex justify-content-md-end justify-content-center mt-3 small text-center">

@@ -246,7 +246,7 @@ p.card-text {
     }
 
     .div-calendario {
-        width: 31px;;
+        width: 31px;
         height: 31px; 
         background-color: rgb(249 230 173);
     }
@@ -347,6 +347,13 @@ p.card-text {
 
     p.card-text {
         font-size: 12px;
+    }
+
+    .input-nome,
+    .input-matricula,
+    .input-curso {
+        font-size: 11px;
+    
     }
 
     /* .quadro-horario {

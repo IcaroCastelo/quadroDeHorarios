@@ -25,7 +25,7 @@
                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "q5myjuk1p4");
         </script>
-      <title>Quadro de horário</title>90 
+      <title>Quadro de horário</title>
    </head>
    
    <body>

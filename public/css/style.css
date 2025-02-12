@@ -53,6 +53,10 @@ body {
     line-height: 28px; /* 155.556% */
 }
 
+.form-select {
+    margin-left: 1dvw;
+}
+
 .pesquisar {
     background: var(--Color-Gradient-Primary-Enabled, linear-gradient(268deg, #D35614 0%, #F9A053 100%));
     font-family: "Montserrat";

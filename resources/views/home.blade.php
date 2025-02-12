@@ -229,7 +229,7 @@
                                                 </svg>
                                             <div class="text-with-icon">
                                                 <span class="message-text">Campo obrigatório</span>
-                                                <span class="message-text"></br> Preenhca seu <strong>CPF.</strong></span></br>
+                                                <span class="message-text"></br> Preencha seu <strong>CPF.</strong></span></br>
                                                
                                             </div>
                                         </div>

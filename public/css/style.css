@@ -53,9 +53,20 @@ body {
     line-height: 28px; /* 155.556% */
 }
 
-.form-select {
-    margin-left: 1dvw;
+.filtro {
+    color: #000;
+
+    /* Body/Large */
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 155.556% */
 }
+
+/* .form-select {
+    margin-left: 1dvw;
+} */
 
 .pesquisar {
     background: var(--Color-Gradient-Primary-Enabled, linear-gradient(268deg, #D35614 0%, #F9A053 100%));
@@ -337,10 +348,10 @@ p.card-text {
         width: 100%;
     }
 
-    .form-select {
+    /* .form-select {
         margin-top: 10px;
         margin-left: 0px;
-    }
+    } */
    
 }
 
@@ -502,9 +513,9 @@ p.card-text {
         margin-top: 20px;
     }
 
-    .form-select {
+    /* .form-select {
         margin-top: 10px;
         margin-left: 0px;
-    }
+    } */
 
 }

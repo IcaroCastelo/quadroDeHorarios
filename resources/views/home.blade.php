@@ -76,7 +76,9 @@
                             <span class="mt-2 mt-md-0 mr-3 w-md-auto" id="butao">
                                 <a type="button" class="btn btn-success w-100 pesquisar">pesquisar</a>
                             </span>
-                           
+                        </div>
+                        <div class="d-flex flex-column w-100 mt-3">
+                            <label for="tipo" class="form-label filtro">Você é Aluno ou Professor?</label>
                             <select name="tipo" id="tipo" class="form-select">
                                 <option value="1">ALUNO</option>
                                 <option value="2">PROFESSOR</option>

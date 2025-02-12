@@ -219,12 +219,33 @@
                 $('#cpf').mask('99999999999');
                 
                 $("#butao").on("click", function() {
+                    var cpf = $("#cpf").val();
+                    if (cpf === "") {
+                        Swal.fire({
+                            html: `
+                                        <div class="message mt-3 bg-light p-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 53 52" fill="none">
+                                                    <path d="M5.76 51.9875L0.5625 46.79L21.3525 26L0.5625 5.20995L5.76 0.0124512L26.55 20.8025L47.34 0.0124512L52.5375 5.20995L31.7475 26L52.5375 46.79L47.34 51.9875L26.55 31.1975L5.76 51.9875Z" fill="#B0B8B3"/>
+                                                </svg>
+                                            <div class="text-with-icon">
+                                                <span class="message-text">Campo obrigatório</span>
+                                                <span class="message-text"></br> Preenhca seu <strong>CPF.</strong></span></br>
+                                               
+                                            </div>
+                                        </div>
+                                    `,
+                                    customClass: {
+                                        html: 'swal-html-content', 
+                                    },
+                        });
+                        return;
+                    }
                     $.ajax({
                         url: "{{route('quadro.ajax')}}",
                         type: "post",
                         data: {
                             _token: '{{csrf_token()}}',
-                            cpf: $("#cpf").val(),
+                            cpf: cpf,
                             tipo: $("#tipo").val(),
                         },
                         beforeSend: function() {

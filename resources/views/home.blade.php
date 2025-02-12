@@ -73,9 +73,14 @@
                         <label for="basic-url" class="form-label cpf">CPF</label>
                         <div class="d-flex flex-column flex-md-row w-100">
                             <input type="text" class="form-control" name="cpf" id="cpf" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                            <span class="mt-2 mt-md-0  w-md-auto" id="butao">
+                            <span class="mt-2 mt-md-0 mr-3 w-md-auto" id="butao">
                                 <a type="button" class="btn btn-success w-100 pesquisar">pesquisar</a>
                             </span>
+                           
+                            <select name="tipo" id="tipo" class="form-select">
+                                <option value="1">ALUNO</option>
+                                <option value="2">PROFESSOR</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -183,10 +188,11 @@
                         {{-- <a href="https://www.youtube.com/unifametro" target="_blank" class="text-white mx-2"><i class="fab fa-tiktok fa-lg"></i></a> --}}
                     </div>
                 </div>
-                <div class="d-flex justify-content-md-end justify-content-center mt-3 small text-center">
+                <div class="d-flex flex-column align-items-end mt-3 small text-right cetralizar">
+                    <small class="nt">Desenvolvido por NTI Unifametro</small>
                     <small class="copyright">Copyright © 2025 Unifametro. Todos os direitos reservados.</small>
                 </div>
-            </div>
+            </link>
         </footer>
      
         <script src="https://code.jquery.com/jquery-3.7.0.js"> </script>
@@ -217,6 +223,7 @@
                         data: {
                             _token: '{{csrf_token()}}',
                             cpf: $("#cpf").val(),
+                            tipo: $("#tipo").val(),
                         },
                         beforeSend: function() {
                             $("#aviso").attr("style", "display: none !important;");
@@ -269,9 +276,10 @@
                                             <div class="d-flex flex-wrap justify-content-center justify-content-md-start mt-3">`;
 
                                 $.each(registros, function(index, item) {
-                                    $('#Aluno').text(item.ALUNO);
+                                   
+                                    $('#Aluno').text(item.ALUNO != null ? item.ALUNO : item.PROFESSOR);
                                     $('#Curso').text(item.CURSO);
-                                    $('#Matricula').text(item.MATRICULA);
+                                    $('#Matricula').text(item.MATRICULA != null ? item.MATRICULA : item.CHAPA);
 
 
                                     tabelaHtml += `<div class="col-sm-4 col-md-4 col-lg-3 mb-3 d-flex card-responsivo">
@@ -294,7 +302,7 @@
                                                         <g mask="url(#mask0_1271_37)">
                                                             <path d="M14.0003 13.9999C14.642 13.9999 15.1913 13.7714 15.6482 13.3145C16.1052 12.8576 16.3337 12.3083 16.3337 11.6666C16.3337 11.0249 16.1052 10.4756 15.6482 10.0187C15.1913 9.56172 14.642 9.33325 14.0003 9.33325C13.3587 9.33325 12.8094 9.56172 12.3524 10.0187C11.8955 10.4756 11.667 11.0249 11.667 11.6666C11.667 12.3083 11.8955 12.8576 12.3524 13.3145C12.8094 13.7714 13.3587 13.9999 14.0003 13.9999ZM14.0003 22.5749C16.3725 20.3971 18.1323 18.4187 19.2795 16.6395C20.4267 14.8603 21.0003 13.2805 21.0003 11.8999C21.0003 9.78047 20.3246 8.04506 18.9732 6.69367C17.6219 5.34228 15.9642 4.66659 14.0003 4.66659C12.0364 4.66659 10.3788 5.34228 9.02741 6.69367C7.67602 8.04506 7.00033 9.78047 7.00033 11.8999C7.00033 13.2805 7.57394 14.8603 8.72116 16.6395C9.86838 18.4187 11.6281 20.3971 14.0003 22.5749ZM14.0003 25.6666C10.8698 23.0027 8.53158 20.5284 6.98574 18.2437C5.43991 15.9589 4.66699 13.8444 4.66699 11.8999C4.66699 8.98325 5.60519 6.65964 7.48158 4.92909C9.35796 3.19853 11.5309 2.33325 14.0003 2.33325C16.4698 2.33325 18.6427 3.19853 20.5191 4.92909C22.3955 6.65964 23.3337 8.98325 23.3337 11.8999C23.3337 13.8444 22.5607 15.9589 21.0149 18.2437C19.4691 20.5284 17.1309 23.0027 14.0003 25.6666Z" fill="#FF7431"/>
                                                         </g>
-                                                    </svg> ${item.UNIDADE} <br>
+                                                    </svg> ${item.UNIDADE ?? 'SEM UNIDADE'} <br>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                                                         <mask id="mask0_1271_42" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
                                                             <rect width="28" height="28" fill="#D9D9D9"/>
@@ -302,7 +310,7 @@
                                                         <g mask="url(#mask0_1271_42)">
                                                             <path d="M3.5 24.5V22.1667H5.83333V3.5H17.5V4.66667H22.1667V22.1667H24.5V24.5H19.8333V7H17.5V24.5H3.5ZM12.8333 15.1667C13.1639 15.1667 13.441 15.0549 13.6646 14.8313C13.8882 14.6076 14 14.3306 14 14C14 13.6694 13.8882 13.3924 13.6646 13.1688C13.441 12.9451 13.1639 12.8333 12.8333 12.8333C12.5028 12.8333 12.2257 12.9451 12.0021 13.1688C11.7785 13.3924 11.6667 13.6694 11.6667 14C11.6667 14.3306 11.7785 14.6076 12.0021 14.8313C12.2257 15.0549 12.5028 15.1667 12.8333 15.1667ZM8.16667 22.1667H15.1667V5.83333H8.16667V22.1667Z" fill="#F6741C"/>
                                                         </g>
-                                                    </svg> ${item.DESCBLOCO ? ` ${item.DESCBLOCO} -` : ''} ${item.SALA} <br>
+                                                    </svg> ${item.DESCBLOCO ? ` ${item.DESCBLOCO} -` : ''} ${item.SALA ?? 'SEM SALA'} <br>
                                                 </p>
                                             </div>
                                         </div>

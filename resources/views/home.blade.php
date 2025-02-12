@@ -72,7 +72,7 @@
                     <div class="input-group input-group-sm mb-3">
                         <label for="basic-url" class="form-label cpf">CPF</label>
                         <div class="d-flex flex-column flex-md-row w-100">
-                            <input type="text" class="form-control" name="cpf" id="cpf" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <input type="text" class="form-control" name="cpf" id="cpf" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
                             <span class="mt-2 mt-md-0 mr-3 w-md-auto" id="butao">
                                 <a type="button" class="btn btn-success w-100 pesquisar">pesquisar</a>
                             </span>

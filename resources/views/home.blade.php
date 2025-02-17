@@ -301,10 +301,24 @@
                                 $.each(registros, function(index, item) {
                                    
                                     $('#Aluno').text(item.ALUNO != null ? item.ALUNO : item.PROFESSOR);
-                                    $('#Curso').text(item.CURSO);
-                                    $('#Matricula').text(item.MATRICULA != null ? item.MATRICULA : item.CHAPA);
-
-
+                                    $('#Curso').text(item.PROFESSOR == null ? item.CURSO : '');
+                                   
+                                   
+                                    if (item.PROFESSOR == null) {
+                                        $('#Matricula').text(item.MATRICULA != null ? item.MATRICULA : item.CHAPA);
+                                        $('.curso').css('display', 'block');
+                                        $('.matricula').css('display', 'block');
+                                    } else {
+                                        $('#Matricula').text('');
+                                        $('.curso').css('display', 'none');
+                                        $('.matricula').css('display', 'none');
+                                    }
+                                   
+                                    if (item.PROFESSOR != null) {
+                                        var curso = '<img src="{{ asset('book.png') }}" alt="livro" width="24" /> ' + item.CURSO;
+                                    } else {
+                                        var curso = '';
+                                    }
                                     tabelaHtml += `<div class="col-sm-4 col-md-4 col-lg-3 mb-3 d-flex card-responsivo">
                                         <div class="card flex-grow-1" style="border-radius: 16px; border: 1px solid var(--Neutral-400, #B8B8B8); margin-left: 10px;">
                                             <div class="card-body">
@@ -334,6 +348,7 @@
                                                             <path d="M3.5 24.5V22.1667H5.83333V3.5H17.5V4.66667H22.1667V22.1667H24.5V24.5H19.8333V7H17.5V24.5H3.5ZM12.8333 15.1667C13.1639 15.1667 13.441 15.0549 13.6646 14.8313C13.8882 14.6076 14 14.3306 14 14C14 13.6694 13.8882 13.3924 13.6646 13.1688C13.441 12.9451 13.1639 12.8333 12.8333 12.8333C12.5028 12.8333 12.2257 12.9451 12.0021 13.1688C11.7785 13.3924 11.6667 13.6694 11.6667 14C11.6667 14.3306 11.7785 14.6076 12.0021 14.8313C12.2257 15.0549 12.5028 15.1667 12.8333 15.1667ZM8.16667 22.1667H15.1667V5.83333H8.16667V22.1667Z" fill="#F6741C"/>
                                                         </g>
                                                     </svg> ${item.DESCBLOCO ? ` ${item.DESCBLOCO} -` : ''} ${item.SALA ?? 'SEM SALA'} <br>
+                                                    ${curso}
                                                 </p>
                                             </div>
                                         </div>

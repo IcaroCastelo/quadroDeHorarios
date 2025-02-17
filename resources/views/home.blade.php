@@ -140,8 +140,8 @@
                     width: 90%; /* Para telas pequenas */
                     max-width: 400px; /* No máximo 400px */
                 ">
-                    <img src="https://s3-alpha-sig.figma.com/img/208d/2a61/9cc2534bfad1405f6ebd89c03d6facaf?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Oh9ZzYCW4f92~YTUlyYKsUKlJVTGoa-Qs0sa4lQ5pa8pPWk30BNMEi1VVyfGItZO2EG6FipnL-a55YcQmVucD2Ml69~N2-c8zcc9CNOoSw9ptMo0WlCWVCCrEvXO6IOX~GbgZ1kDQnYve29D9fF3Tu6csiLmQX21Wos8Nhb4rluje4MVgcSAilvglxGOM1a7ckN5KzRq07wSe1hMbsPm7-da7-o0HdDRWbVAHf1d9GcKuPASION0oW0p0346sJSaRXhrMneqevs6OT3HuaN0lHQBdLtbJfDwLO0jo8pNxLVqG-6qBSjcTXFTP11zY3aSUg6~YMnLmHPiPl75BncHbA__" 
-                        alt="GIF" width="80" height="40" id="loading-gif">
+                    <img src="{{asset('loading.gif')}}" 
+                        alt="GIF" width="80" height="80" id="loading-gif">
 
                     <span id="loading-text" style="
                         font-family: Montserrat; 

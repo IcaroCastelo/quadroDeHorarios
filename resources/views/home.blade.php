@@ -315,7 +315,7 @@
                                     }
                                    
                                     if (item.PROFESSOR != null) {
-                                        var curso = '<img src="{{ asset('book.png') }}" alt="livro" width="24" /> ' + item.CURSO;
+                                        var curso = '<img src="{{ asset('book.png') }}" alt="livro" width="24" style="margin-left: 3px;" /> ' + item.CURSO;
                                     } else {
                                         var curso = '';
                                     }

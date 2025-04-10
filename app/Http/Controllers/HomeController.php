@@ -133,6 +133,7 @@ class HomeController extends Controller
                         ELSE CONCAT(YEAR(GETDATE()), '2')
                     END
                 ORDER BY
+                    HORAINICIAL,
                     PROFESSOR,
                     CURSO,
                     DIASEMANA,
@@ -141,17 +142,14 @@ class HomeController extends Controller
     
         } elseif ($tipo == 1) {
             // Segunda consulta (aluno)
-            $quadroDeHorario = DB::select("SELECT 
+            $quadroDeHorario = DB::select("SELECT DISTINCT
                     UNIDADE, 
                     SALA, 
                     DIASEMANA,
                     NUMEROSEMANA,
                     UNIDADE,
-                    SALA, 
-                    DIASEMANA,    
-                    -- REPLACE(UNIDADE, '-', CASE WHEN DISCIPLINA LIKE '%- Distância' THEN 'EAD' ELSE 'PRESENCIAL' END) AS UNIDADE,
-                    -- REPLACE(SALA, '-', CASE WHEN DISCIPLINA LIKE '%- Distância' THEN 'EAD' ELSE 'PRESENCIAL' END) AS SALA, 
-                    -- REPLACE(DIASEMANA, '-', CASE WHEN DISCIPLINA LIKE '%- Distância' THEN 'EAD' ELSE 'PRESENCIAL' END) AS DIASEMANA,    
+                    DIASEMANA,
+                    HORAINICIAL,    
                     REPLACE(CONCAT(HORAINICIAL, ' - ', HORAFINAL), '- - -', CASE WHEN DISCIPLINA LIKE '%- Distância' THEN 'EAD' ELSE 'PRESENCIAL' END) AS HORARIO,
                     DISCIPLINA,
                     CURSO,
@@ -165,7 +163,8 @@ class HomeController extends Controller
                     CPF = ?
                     AND CODCOLIGADA = 1
                 ORDER BY
-                    NUMEROSEMANA
+                HORAINICIAL,
+                NUMEROSEMANA
             ", [$cpf]);
         } else {
             return response()->json(['error' => 'Tipo de consulta inválido'], 400);

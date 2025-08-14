@@ -407,7 +407,7 @@
                                             margin-bottom: 25px;
                                             font-weight: 400;
                                         ">
-                                            Não encontramos disciplinas cadastradas para este CPF.<br>
+                                            Não encontramos disciplinas cadastradas <br>para este CPF.<br><br>
                                             Para resolver esta situação, procure o Atendimento ao Aluno no primeiro andar
                                         </p>
                                         

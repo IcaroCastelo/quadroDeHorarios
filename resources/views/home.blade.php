@@ -401,7 +401,7 @@
                                         </h3>
                                         
                                         <p style="
-                                            color: #7f8c8d; 
+                                            color: #7f8c7d; 
                                             font-size: 16px; 
                                             line-height: 1.6; 
                                             margin-bottom: 25px;
